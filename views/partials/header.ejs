@@ -1,16 +1,17 @@
 <header class="site-header">
   <div class="wrap">
-    <div class="brand">
-      <a href="/">CSE Motors</a>
-    </div>
-    <nav class="tabs">
+    <h1 class="brand"><a href="/"><%= title || 'W01 Site' %></a></h1>
+    <nav>
       <a href="/">Home</a>
-      <a href="/sedan">Sedan</a>
-      <a href="/suv">SUV</a>
-      <a href="/truck">Truck</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <% if (locals.loggedin) { %>
+        <a href="/account/">Account</a>
+        <a href="/account/logout">Logout</a>
+      <% } else { %>
+        <a href="/account/login">Login</a>
+        <a href="/account/registration">Register</a>
+      <% } %>
     </nav>
-    <div id="tools">
-      <a href="/login">My Account</a>
-    </div>
   </div>
 </header>

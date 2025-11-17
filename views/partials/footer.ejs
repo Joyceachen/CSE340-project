@@ -1,6 +1,7 @@
-<% const d = new Date()
-let year = d.getFullYear() %>
-<footer>
-  <p class="copyright">&copy; <%= year %>, CSE 340 App</p>
-  <a class="error-link" href="/ierror">Error Link</a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <%= new Date().getFullYear() %> W01 Site — Demo submission</p>
+    <p><a href="/intentional-error" title="Trigger an intentional error to test error handling">Intentional Error</a></p>
+  </div>
 </footer>
